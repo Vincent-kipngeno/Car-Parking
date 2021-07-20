@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.dominicsilveira.parkingsystem">
+    package="com.vincekip.parkingsystem">
 
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.INTERNET" />
@@ -12,34 +12,34 @@
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
-        android:name=".utils.AppConstants"
+        android:name="com.vincekip.parkingsystem.utils.AppConstants"
         android:allowBackup="true"
         android:icon="@drawable/logo_no_name"
         android:label="@string/app_name"
         android:roundIcon="@drawable/logo_with_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".RegisterLogin.RecoverAccountActivity"
+        <activity android:name="com.vincekip.parkingsystem.RegisterLogin.RecoverAccountActivity"
             android:theme="@style/NoActionBar" />
         <activity
-            android:name=".RegisterLogin.VerifiedActivity"
+            android:name="com.vincekip.parkingsystem.RegisterLogin.VerifiedActivity"
             android:theme="@style/NoActionBar" />
         <activity
-            android:name=".RegisterLogin.StepperWizardActivity"
+            android:name="com.vincekip.parkingsystem.RegisterLogin.StepperWizardActivity"
             android:theme="@style/NoActionBar" />
         <activity
-            android:name=".RegisterLogin.ResetPasswordActivity"
+            android:name="com.vincekip.parkingsystem.RegisterLogin.ResetPasswordActivity"
             android:theme="@style/NoActionBar" />
-        <activity android:name=".common.BookingDetailsActivity" />
-        <activity android:name=".ui.profile.UpiDetailsActivity" />
-        <activity android:name=".ui.profile.AboutMeActivity" />
-        <activity android:name=".ui.profile.ChangePasswordActivity" />
-        <activity android:name=".ui.profile.PersonalDetailsActivity" />
-        <activity android:name=".NormalUser.NearByAreaActivity" />
-        <activity android:name=".OwnerUser.AreaHistoryActivity" />
-        <activity android:name=".NormalUser.UserHistoryActivity" />
+        <activity android:name="com.vincekip.parkingsystem.common.BookingDetailsActivity" />
+        <activity android:name="com.vincekip.parkingsystem.ui.profile.UpiDetailsActivity" />
+        <activity android:name="com.vincekip.parkingsystem.ui.profile.AboutMeActivity" />
+        <activity android:name="com.vincekip.parkingsystem.ui.profile.ChangePasswordActivity" />
+        <activity android:name="com.vincekip.parkingsystem.ui.profile.PersonalDetailsActivity" />
+        <activity android:name="com.vincekip.parkingsystem.NormalUser.NearByAreaActivity" />
+        <activity android:name="com.vincekip.parkingsystem.OwnerUser.AreaHistoryActivity" />
+        <activity android:name="com.vincekip.parkingsystem.NormalUser.UserHistoryActivity" />
         <activity
-            android:name=".RegisterLogin.SplashScreen"
+            android:name="com.vincekip.parkingsystem.RegisterLogin.SplashScreen"
             android:theme="@style/SplashTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -69,21 +69,21 @@
                     android:scheme="one_q_shop" />
             </intent-filter>
         </activity>
-        <activity android:name=".OwnerUser.MainOwnerActivity" />
+        <activity android:name="com.vincekip.parkingsystem.OwnerUser.MainOwnerActivity" />
         <activity
-            android:name=".NormalUser.MainNormalActivity"
+            android:name="com.vincekip.parkingsystem.NormalUser.MainNormalActivity"
             android:launchMode="singleTop" /> <!-- for no stacking due to notification -->
-        <activity android:name=".NormalUser.BookParkingAreaActivity" />
-        <activity android:name=".OwnerUser.AddPositionActivity" />
-        <activity android:name=".NormalUser.GPSMapActivity" />
+        <activity android:name="com.vincekip.parkingsystem.NormalUser.BookParkingAreaActivity" />
+        <activity android:name="com.vincekip.parkingsystem.OwnerUser.AddPositionActivity" />
+        <activity android:name="com.vincekip.parkingsystem.NormalUser.GPSMapActivity" />
         <activity
-            android:name=".RegisterLogin.ForgotPasswordActivity"
+            android:name="com.vincekip.parkingsystem.RegisterLogin.ForgotPasswordActivity"
             android:theme="@style/NoActionBar" />
         <activity
-            android:name=".RegisterLogin.RegisterActivity"
+            android:name="com.vincekip.parkingsystem.RegisterLogin.RegisterActivity"
             android:theme="@style/NoActionBar" />
         <activity
-            android:name=".RegisterLogin.LoginActivity"
+            android:name="com.vincekip.parkingsystem.RegisterLogin.LoginActivity"
             android:theme="@style/NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -96,13 +96,13 @@
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/map_key" /> <!-- Google Maps API key -->
         <receiver
-            android:name=".utils.notifications.NotificationReceiver"
+            android:name="com.vincekip.parkingsystem.utils.notifications.NotificationReceiver"
             android:enabled="true"
             android:exported="false" />
-        <receiver android:name=".utils.notifications.NotificationActionReceiver" /> <!-- Notification receiver -->
+        <receiver android:name="com.vincekip.parkingsystem.utils.notifications.NotificationActionReceiver" /> <!-- Notification receiver -->
         <!-- Home Screen Widget Start -->
         <receiver
-            android:name=".utils.widgets.ParkingOwnerUserWidget"
+            android:name="com.vincekip.parkingsystem.utils.widgets.ParkingOwnerUserWidget"
             android:label="Smart Parking (Owner User)">
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
@@ -113,7 +113,7 @@
                 android:resource="@xml/parking_owner_user_widget_info" />
         </receiver>
         <receiver
-            android:name=".utils.widgets.ParkingNormalUserWidget"
+            android:name="com.vincekip.parkingsystem.utils.widgets.ParkingNormalUserWidget"
             android:label="Smart Parking (Normal User)">
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
@@ -125,7 +125,7 @@
         </receiver> <!-- Home Screen Widget End -->
         <!-- Background service Start -->
         <service
-            android:name=".utils.services.MyParkingService"
+            android:name="com.vincekip.parkingsystem.utils.services.MyParkingService"
             android:foregroundServiceType="dataSync" />
     </application>
 

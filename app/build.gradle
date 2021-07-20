@@ -9,7 +9,7 @@ android {
     useLibrary 'org.apache.http.legacy'
 
     defaultConfig {
-        applicationId "com.dominicsilveira.parkingsystem"
+        applicationId "com.vincekip.parkingsystem"
         minSdkVersion 21
         targetSdkVersion 30
         versionCode 1
